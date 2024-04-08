@@ -5,6 +5,27 @@
   font-family: Arial, sans-serif;
 }
 
+.ResetButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  
+}
+
+.ResetButton:hover {
+  background-color: #0056b3;
+}
+.SortAndReset {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
 /* FilterControls styles */
 .FilterControls {
   margin-bottom: 20px;
@@ -70,3 +91,32 @@
 .Aggregator li {
   margin-bottom: 5px;
 }
+
+.MainContent {
+  display: flex;
+}
+
+.ItemListContainer {
+  flex: 1;
+}
+
+.FavoritesTitle {
+  position: sticky;
+  top: 0;
+  background-color: #fff; /* Ensure the title appears above the list */
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.FavoritesList {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px; /* Adjust width as needed */
+  height: 100%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-right: 20px;
+}
+

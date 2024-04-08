@@ -57,23 +57,31 @@ function App() {
 
   return (
     <div>
-      <h1>Clothing Store</h1>
-      <FilterControls
-        filters={filters}
-        onFilterChange={handleFilterChange}
-      />
-      <SortControls
-        sortBy={sortBy}
-        onSortChange={handleSortChange}
-      />
-      <button onClick={handleReset}>Reset</button>
-      <ItemList
-        items={filteredItems}
-        onAddToAggregator={handleAddToAggregator}
-        onRemoveFromAggregator={handleRemoveFromAggregator}
-        aggregatorItems={aggregator}
-      />
-      <Aggregator items={aggregator} />
+      <h1>Clothing Selection</h1>
+      <div className="MainContent">
+        <div className="ItemListContainer">
+          <FilterControls
+            filters={filters}
+            onFilterChange={handleFilterChange}
+          />
+          <div className="SortAndReset">
+            <SortControls
+              sortBy={sortBy}
+              onSortChange={handleSortChange}
+            />
+          <button className="ResetButton" onClick={handleReset}>Reset</button>
+          </div>
+        <ItemList
+            items={filteredItems}
+            onAddToAggregator={handleAddToAggregator}
+            onRemoveFromAggregator={handleRemoveFromAggregator}
+            aggregatorItems={aggregator}
+          />
+        </div>
+        <div className="Aggregator">
+          <Aggregator items={aggregator} />
+        </div>
+      </div>
     </div>
   );
 }

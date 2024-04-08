@@ -1,13 +1,12 @@
 // ItemList.js
 import React from 'react';
 import ItemCard from './ItemCard';
+import './ItemList.css';
 
 function ItemList({ items, onAddToAggregator, onRemoveFromAggregator, aggregatorItems }) {
-  return (
-    <div>
-      <h2>Items:</h2>
-      <div>
-        {items.map(item => (
+    return (
+      <div className="ItemList">
+        {items.map((item) => (
           <ItemCard
             key={item.id}
             item={item}
@@ -17,8 +16,7 @@ function ItemList({ items, onAddToAggregator, onRemoveFromAggregator, aggregator
           />
         ))}
       </div>
-    </div>
-  );
-}
-
-export default ItemList;
+    );
+  }
+  
+  export default ItemList;
