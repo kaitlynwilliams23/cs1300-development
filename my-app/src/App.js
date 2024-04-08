@@ -10,13 +10,14 @@ import data from './data';
 function App() {
 
   const [items, setItems] = useState(data); // Store all items
-  const [originalData, setOriginalData] = useState(data);
+  const [originalData, setOriginalData] = useState([]);
   const [filters, setFilters] = useState({ price: '', color: '' });
   const [sortBy, setSortBy] = useState('');
   const [aggregator, setAggregator] = useState([]);
 
   useEffect(() => {
-    setOriginalData(data);
+    setItems(data); // Set items with the original data
+    setOriginalData(data); // Store original data
   }, []);
 
   const handleFilterChange = (filterType, value) => {
@@ -39,7 +40,6 @@ function App() {
   const handleReset = () => {
     setFilters({ price: '', color: '' });
     setSortBy('');
-    setAggregator([]);
     // Reset item list to display all items
     setItems(originalData);
   };
@@ -58,6 +58,8 @@ function App() {
     filteredItems.sort((a, b) => a.price - b.price);
   } else if (sortBy === 'name') {
     filteredItems.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (!sortBy) {
+    filteredItems = originalData;
   }
 
   return (

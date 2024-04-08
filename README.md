@@ -1,6 +1,6 @@
 # cs1300-development
 
-Link to deployed website: 
+Link to deployed website: https://cs1300-development-snowy.vercel.app/
 
 Instructions on how to run: 
 - First open up the terminal
