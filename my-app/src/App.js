@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FilterControls from './FilterControls';
 import SortControls from './SortControls.js';
 import ItemList from './ItemList';
@@ -10,9 +10,14 @@ import data from './data';
 function App() {
 
   const [items, setItems] = useState(data); // Store all items
+  const [originalData, setOriginalData] = useState(data);
   const [filters, setFilters] = useState({ price: '', color: '' });
   const [sortBy, setSortBy] = useState('');
   const [aggregator, setAggregator] = useState([]);
+
+  useEffect(() => {
+    setOriginalData(data);
+  }, []);
 
   const handleFilterChange = (filterType, value) => {
     setFilters({ ...filters, [filterType]: value });
@@ -36,7 +41,7 @@ function App() {
     setSortBy('');
     setAggregator([]);
     // Reset item list to display all items
-    setItems(data);
+    setItems(originalData);
   };
 
   // Apply filters
@@ -57,7 +62,7 @@ function App() {
 
   return (
     <div>
-      <h1>Clothing Selection</h1>
+      <h1 className='Title'>Clothing Selection</h1>
       <div className="MainContent">
         <div className="ItemListContainer">
           <FilterControls

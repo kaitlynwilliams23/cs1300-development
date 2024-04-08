@@ -8,6 +8,7 @@ const data = [
     color: 'white',
     type: 'shirt'
   },
+  
   {
     id: 2,
     image: '../images/1980_pacific_sunwear_crew_neck_sweatshirt.png',
@@ -42,7 +43,7 @@ const data = [
   },
   {
     id: 6,
-    image: 'my-app/src/images/linen_romper_green.png',
+    image: '../images/linen_romper_green.png',
     name: 'Linen Romper Green',
     price: 30.99,
     color: 'green',
@@ -50,7 +51,7 @@ const data = [
   },
   {
     id: 7,
-    image: 'my-app/src/images/stella_halter_sweater_top_black.png',
+    image: '../images/stella_halter_sweater_top_black.png',
     name: 'Stella Halter Sweater Top',
     price: 14.99,
     color: 'black',
@@ -58,7 +59,7 @@ const data = [
   },
   {
     id: 8,
-    image: 'my-app/src/images/stella_halter_sweater_top_green.png',
+    image: '../images/stella_halter_sweater_top_green.png',
     name: 'Stella Halter Sweater Top',
     price: 14.99,
     color: 'green',
@@ -66,7 +67,7 @@ const data = [
   },
   {
     id: 9,
-    image: 'my-app/src/images/textured_babydoll_minidress.png',
+    image: '../images/textured_babydoll_minidress.png',
     name: 'Textured Babydoll Mini Dress',
     price: 30.99,
     color: 'black',
@@ -74,7 +75,7 @@ const data = [
   },
   {
     id: 10,
-    image: 'my-app/src/images/tie_front_minidress.png',
+    image: '../images/tie_front_minidress.png',
     name: 'Tie Front Mini Dress',
     price: 18.99,
     color: 'white',
@@ -82,7 +83,7 @@ const data = [
   },
   {
     id: 11,
-    image: 'my-app/src/images/woodland_vneck_sweater_green.png',
+    image: '../images/woodland_vneck_sweater_green.png',
     name: 'Woodland V-Neck Sweater',
     price: 20.99,
     color: 'green',
@@ -90,7 +91,7 @@ const data = [
   },
   {
     id: 12,
-    image: 'my-app/src/images/woodland_vneck_sweater_white.png',
+    image: '../images/woodland_vneck_sweater_white.png',
     name: 'Woodland V-Neck Sweater',
     price: 20.99,
     color: 'white',

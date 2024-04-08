@@ -2,6 +2,7 @@
 import React from 'react';
 import './ItemCard.css'; // Import CSS for styling
 
+
 function ItemCard({ item, onAddToAggregator, onRemoveFromAggregator, isAddedToAggregator }) {
     const handleAddRemoveClick = () => {
       if (isAddedToAggregator) {

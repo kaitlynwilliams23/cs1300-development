@@ -6,10 +6,10 @@ function FilterControls({ filters, onFilterChange }) {
   
     return (
       <div>
-        <h2>Filter by:</h2>
-        <label>
+        <h2 className="FilterTitle">Filter by:</h2>
+        <label className="label">
           Type:
-          <select name="type" value={filters.type} onChange={handleFilterChange}>
+          <select className="select" name="type" value={filters.type} onChange={handleFilterChange}>
             <option value="">All</option>
             <option value="shirt">Shirt</option>
             <option value="pants">Pants</option>
@@ -17,9 +17,9 @@ function FilterControls({ filters, onFilterChange }) {
             <option value="dress">Dresses</option>
         </select>
         </label>
-        <label>
+        <label className="label"> 
           Color:
-          <select name="color" value={filters.color} onChange={handleFilterChange}>
+          <select className="select" name="color" value={filters.color} onChange={handleFilterChange}>
             <option value="">All</option>
             <option value="red">Red</option>
             <option value="white">White</option>
