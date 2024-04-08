@@ -57,10 +57,7 @@ function App() {
   if (sortBy === 'price') {
     filteredItems.sort((a, b) => a.price - b.price);
   } else if (sortBy === 'name') {
-    filteredItems.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (!sortBy) {
-    filteredItems = originalData;
-  }
+    filteredItems.sort((a, b) => a.name.localeCompare(b.name)); }
 
   return (
     <div>
